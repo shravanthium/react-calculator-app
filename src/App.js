@@ -5,7 +5,7 @@ import Key from './components/key/key';
 
 export default function App() {
   const [displayValue, setDisplayValue] = useState('');
-  const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9,0];
   const operators = ['+', '-', '*', '/', '='];
 
   const [clickedNumbers, setNumbers] = useState([]);
@@ -14,7 +14,7 @@ export default function App() {
   const handleNumberChange = (event) => {
     console.log(event);
     setNumbers([...clickedNumbers, event.target.value]);
-    
+
     if(clickedOperator){
       setDisplayValue("="+eval(displayValue + event.target.value));
     }else{
@@ -29,20 +29,24 @@ export default function App() {
   };
 
   const numbersComponent = numbers.map((number) => (
+    <span className="">
     <Key
       key={number}
       value={number}
       onClick={handleNumberChange}
       onClickHandler={handleNumberChange}
     />
+    </span>
   ));
   const operatorComponent = operators.map((operator, index) => (
+    <span>
     <Key
       key={index}
       value={operator}
       onClick={handleOperatorClick}
       onClickHandler={handleOperatorClick}
     />
+    </span>
   ));
 
   return (

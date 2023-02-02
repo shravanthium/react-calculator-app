@@ -11,8 +11,6 @@ p {
 }
 
 .key {
-  margin-top: 10px;
-  margin-bottom: 10px;
   border: 1px solid;
   padding: 10px;
   width: 400px;
@@ -20,14 +18,19 @@ p {
   display: flex;
 }
 
-.numbers{
+span {
+  padding: 8px;
+}
+
+.numbers {
   border: 1px solid;
+  margin: 2px;
   width: 200px;
   height: 100%;
   padding: 5px;
 }
 
-.operators{
+.operators {
   border: 1px solid;
   height: 100%;
   width: 200px;

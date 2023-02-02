@@ -1,17 +1,19 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
+import './key.css';
 
-function Key({value, onClickHandler}){
-
+function Key({ value, onClickHandler }) {
   return (
-    <button onClick={onClickHandler} value={value}>
-      {value}
+    <span>
+      <button onClick={onClickHandler} value={value}>
+        {value}
       </button>
-  )
+    </span>
+  );
 }
 
 Key.propTypes = {
-  value: PropTypes.string
-}
+  value: PropTypes.string,
+};
 
 export default Key;
